@@ -19,18 +19,21 @@ public class Another {
 
             }
 
-            if (k > 2) {
-                System.out.println(x + "false");
+            else if (k > 2) {
+                System.out.println(x + " false");
                 k = 0;
+
             }
 
 
+
             }
+
 
 
         }
 
-
     }
+
 
 

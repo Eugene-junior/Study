@@ -13,13 +13,21 @@ public class Task {
 
         int N = scanner.nextInt();
 
-        for (int i = 2; i <= N; i = i + 2) {
+        if (N % 2 != 0) {
+            System.out.println("Error, please enter Odd number!");
 
-            sum+=i;
+        } else
 
-        }
+            for (int i = 2; i <= N; i = i + 2) {
+
+                sum += i;
+
+            }
         System.out.println("Сумма четных чисел будет: " + sum);
 
+    }
+
+
 
 
 
@@ -30,7 +38,14 @@ public class Task {
 
 
 
-    }
+
+
+
+
+
+
+
+
 
 
 

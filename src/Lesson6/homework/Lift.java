@@ -6,9 +6,9 @@ public class Lift {
 
         int sum = 0;
         int floor = 1;
-        int stepUp = 30;
-        int stepDown = 2;
-        int height = 25 - floor;
+        int stepUp = 5;
+        int stepDown = 1;
+        int height = 9 - floor;
         int counter = 0;
         boolean condition = true;
 
