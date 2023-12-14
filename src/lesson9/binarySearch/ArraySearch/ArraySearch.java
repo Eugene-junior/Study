@@ -10,7 +10,7 @@ public class ArraySearch {
         boolean condition = false;
         int[] array = {1,2,2,4,5,6,2,8,8,10};
         int N;
-
+        System.out.println("Array to explore " + Arrays.toString(array));
         System.out.println("Enter your number");
         N = scanner.nextInt();
 
