@@ -15,6 +15,11 @@ public class Triangle extends Shape{
     }
 
     @Override
+    public String getName() {
+        return super.getName();
+    }
+
+    @Override
     public String toString() {
         return "Triangle{" +
                 "SideA=" + SideA +

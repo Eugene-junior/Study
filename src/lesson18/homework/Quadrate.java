@@ -12,6 +12,11 @@ public class Quadrate extends Shape{
     }
 
     @Override
+    public String getName() {
+        return super.getName();
+    }
+
+    @Override
     public double CalculatorSquare() {
         return Side * Side;
     }

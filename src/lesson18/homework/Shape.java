@@ -8,6 +8,10 @@ abstract class Shape {
         this.name = name;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public double CalculatorSquare (){return 0;
 
     };

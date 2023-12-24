@@ -8,7 +8,10 @@ public class MathApp {
      Service service = new Service();
      service.CreateArray();
 
-     service.RandomShape();
+     service.FillMyShape();
+     service.AreaShapes();
+        System.out.println("====================");
+     service.PerimeterShapes();
 
 
 
