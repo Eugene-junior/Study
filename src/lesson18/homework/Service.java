@@ -17,11 +17,6 @@ public class Service {
          System.out.println("Your array size is: " + N );
     }
 
-
-
-
-    Shape[] RandomShape = {new Quadrate("Quadrate", random.nextInt(10,20)), new Circle("Circle", random.nextInt(10, 20)), new Rectangle("Rectangle", random.nextInt(10,20), 20), new Triangle("Triangle", random.nextInt(10,20),(random.nextInt(10,20)),(random.nextInt(10,20)),(random.nextInt(10,20)))};
-
     public void FillMyShape(){
 
       int counter = 0;
