@@ -4,7 +4,6 @@ import java.util.Collections;
 import java.util.List;
 
 public class Service {
-    LinkedListOfNumbers numbers = new LinkedListOfNumbers();
 
     public void SearchMax(List<Integer> myNumbers) {
 
@@ -12,7 +11,7 @@ public class Service {
 
         for (int i = 0; i < myNumbers.size(); i++) {
 
-            if (myNumbers.get(i) > max) {
+            if (myNumbers.get(i) >= max) {
                 max = myNumbers.get(i);
             }
         }
@@ -25,7 +24,7 @@ public class Service {
 
         for (int i = 0; i < myNumbers.size(); i++) {
 
-            if (myNumbers.get(i) < min) {
+            if (myNumbers.get(i) <= min) {
                 min = myNumbers.get(i);
             }
         }

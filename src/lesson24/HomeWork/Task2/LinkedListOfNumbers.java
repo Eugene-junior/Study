@@ -7,6 +7,7 @@ public class LinkedListOfNumbers {
         Service search = new Service();
 
         List<Integer> myNumbers = new LinkedList<>();
+
         myNumbers.add(27);
         myNumbers.add(5);
         myNumbers.add(12);
