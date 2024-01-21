@@ -6,9 +6,9 @@ import java.util.Objects;
 public class Students implements Comparable <Students> {
 
     private String name;
-    private double avRange;
+    private String avRange;
 
-    public Students(String name, double avRange) {
+    public Students(String name, String avRange) {
         this.name = name;
         this.avRange = avRange;
     }
@@ -17,7 +17,7 @@ public class Students implements Comparable <Students> {
         return name;
     }
 
-    public double getAvRange() {
+    public String getAvRange() {
         return avRange;
     }
 
@@ -44,6 +44,7 @@ public class Students implements Comparable <Students> {
 
     @Override
     public int compareTo(Students students) {
-        return (int) (avRange - students.getAvRange());
+        String newStudent = students.getAvRange();
+        return avRange.compareTo(newStudent);
     }
 }
