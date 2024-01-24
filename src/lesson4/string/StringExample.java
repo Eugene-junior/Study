@@ -4,11 +4,11 @@ public class StringExample {
 
     public static void main(String[] args) {
 
-        String text1 = "This is string text example";
+        String text1 = "This is string textTask example";
 
-        String text2 = "This is string text example";
+        String text2 = "This is string textTask example";
 
-        String text3 = new String("This is string text example");
+        String text3 = new String("This is string textTask example");
 
 
         System.out.println(text1 == text2);
