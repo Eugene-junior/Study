@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class UserMenu {
 
-    private final List<MenuCommand>commands;
+    private  final List<MenuCommand>commands;
 
     public UserMenu(List<MenuCommand> commands) {
         this.commands = commands;
@@ -14,7 +14,7 @@ public class UserMenu {
     public void startUserMenu(){
         while (true){
             for (int i = 0; i < commands.size(); i++) {
-                System.out.println(i + " " + commands.get(i).getMenuName());
+                System.out.println(i + "  " + commands.get(i).getMenuName());
             }
             System.out.println("Make your choice");
             Scanner scanner = new Scanner(System.in);

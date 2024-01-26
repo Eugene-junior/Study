@@ -20,10 +20,10 @@ public class AddProductMenu implements MenuCommand{
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please, enter name of product");
         String name = scanner.nextLine();
-        System.out.println("Please, enter price of product");
-        Double price = scanner.nextDouble();
         System.out.println("Please, enter description of product");
         String description = scanner.nextLine();
+        System.out.println("Please, enter price of product");
+        Double price = scanner.nextDouble();
 
         ProductDto productDto = new ProductDto(name, price, description);
         ResponseForClientAddProduct AddCommandResult = productService.addNewProduct(productDto);

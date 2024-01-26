@@ -11,21 +11,23 @@ public class Validation {
 
     public List<ErrorDto> validate(ProductDto productDto) {
         List<ErrorDto> errors = new ArrayList<>();
-        if (productDto.getProductName() == null) {
-            ErrorDto errorDto = new ErrorDto(ErrorCode.IE_413, "Product can not be null");
-            errors.add(errorDto);
+        if (productDto.getProductName().isBlank()) {
+            addError(errors, ErrorCode.IE_413,"Product can not be null");
+            }
+        int productNameLength = productDto.getProductName().trim().length();
+        if (productNameLength < 3 || productNameLength >10) {
+            addError(errors, ErrorCode.IE_413, "Product name length should be between 3 and 10 letters");
         }
-        if (productDto.getProductName().trim().length() < 3 || productDto.getProductName().trim().length() > 10) {
-            ErrorDto errorDto = new ErrorDto(ErrorCode.IE_415, "Product name must have more than 3 and less than 10 letters");
-            errors.add(errorDto);
 
-        }
+
         if (productDto.getPrice() == null || productDto.getPrice() <= 0) {
-            ErrorDto errorDto = new ErrorDto(ErrorCode.IE_415, "Product price can not be null and must bigger than 0");
-            errors.add(errorDto);
-
-
+            addError(errors, ErrorCode.IE_415, "Product price must not be null and should be bigger 0");
         }
+
         return errors;
     }
+      private void addError(List<ErrorDto> errors, ErrorCode errorCode, String message){
+        errors.add(new ErrorDto(errorCode, message));
+    }
+
 }

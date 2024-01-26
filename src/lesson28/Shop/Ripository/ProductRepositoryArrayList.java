@@ -4,6 +4,7 @@ import Shop.DTO.ProductDto;
 import Shop.Entity.Product;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class ProductRepositoryArrayList implements ProductRepository{
@@ -38,5 +39,20 @@ public class ProductRepositoryArrayList implements ProductRepository{
 
         }
 
+    @Override
+    public boolean deleteById(Integer id) {
+        Iterator<Product> iterator = dataBase.iterator();
+        while (iterator.hasNext()){
+            Product product = iterator.next();
+            if (product.getId().equals(id)){
+                iterator.remove();
+                return true;
+            }
+        }
+
+        return false;
     }
+
+
+}
 

@@ -62,4 +62,14 @@ public class ProductService {
         }
         return new ResponseForClientById(productForClient, errorId);
     }
+
+    public ResponseForClientDeleteByID deleteById(Integer id) {
+        List<ErrorDto> errors = new ArrayList<>();
+        boolean deleted = productRepository.deleteById(id);
+        if (!deleted) {
+            errors = List.of(new ErrorDto(ErrorCode.IE_400, "Product by ID: " + id + " not found"));
+        }
+
+        return new ResponseForClientDeleteByID(deleted, errors);
+    }
 }
